@@ -101,3 +101,12 @@ class Database:
 
     async def update_file_ids(self, _id, file_ids: dict):
         await self.file.update_one({"_id": ObjectId(_id)}, {"$set": {"file_ids": file_ids}})
+
+    async def get_file_by_fileuniqueid(self, id, file_unique_id, many=False):
+        if many:
+            return self.file.find({"file_unique_id": file_unique_id})
+        else:
+            file_info=await self.file.find_one({"user_id": id, "file_unique_id": file_unique_id})
+        if file_info:
+            return file_info
+        return False
