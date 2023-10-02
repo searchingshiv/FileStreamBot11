@@ -7,6 +7,7 @@ import random
 import asyncio
 import aiofiles
 import datetime
+from WebStreamer.utils.file_properties import get_media_from_message
 from WebStreamer.utils.broadcast_helper import send_msg
 from WebStreamer.utils.database import Database
 from WebStreamer.bot import StreamBot
