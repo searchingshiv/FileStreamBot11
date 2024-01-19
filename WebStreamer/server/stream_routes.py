@@ -1,7 +1,7 @@
 # Taken from megadlbot_oss <https://github.com/eyaadh/megadlbot_oss/blob/master/mega/webserver/routes.py>
 # Thanks to Eyaadh <https://github.com/eyaadh>
 # Thanks to adarsh-goel
-# (c) @biisal
+# (c) @WebStreamer
 import re
 import time
 import math
@@ -10,13 +10,13 @@ import secrets
 import mimetypes
 from aiohttp import web
 from aiohttp.http_exceptions import BadStatusLine
-from biisal.bot import multi_clients, work_loads, StreamBot
-from biisal.server.exceptions import FIleNotFound, InvalidHash
-from biisal import StartTime, __version__
+from WebStreamer.bot import multi_clients, work_loads, StreamBot
+from WebStreamer.server.exceptions import FIleNotFound, InvalidHash
+from WebStreamer import StartTime, __version__
 from ..utils.time_format import get_readable_time
 from ..utils.custom_dl import ByteStreamer
-from biisal.utils.render_template import render_page
-from biisal.vars import Var
+from WebStreamer.utils.render_template import render_page
+from WebStreamer.vars import Var
 
 
 routes = web.RouteTableDef()
